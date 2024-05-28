@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- meta elements -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Results summary component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- title -->
+  <title>Result Card Preview</title>
+  <!-- custom css stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- custom font links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  Your Result
-  76
-  of 100
-
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <article class="card">
+      <section class="card__hero-section">
+        <p>Your Result</p>
+        <div class="card__hero-section-score">
+          <p>76</p>
+          <p>of 100</p>
+        </div>
+        <div class="card__hero-section-feedback">
+          <p>Great</p>
+          <p>You scored higher than 65% of the people who have taken these tests.</p>
+        </div>
+      </section>
+      <section class="card__summary-section">
+        <p>Summary</p>
+        <div class="card__summary-catagories">
+          <div class="catagories" id="c1">
+            <div class="catagories-name">
+                <img src="./assets/images/icon-reaction.svg" alt="icon-reaction">
+                <p class="Reaction">Reaction</p>
+            </div>
+            <p>80 <span>/ 100</span></p>
+          </div>
+          <div class="catagories" id="c2"> 
+            <div class="catagories-name">
+                <img src="./assets/images/icon-memory.svg" alt="icon-memory">
+                <p class="Memory">Memory</p>
+            </div>  
+            <p>92 <span>/ 100</span></p>
+          </div>
+          <div class="catagories" id="c3">
+            <div class="catagories-name">
+                <img src="./assets/images/icon-verbal.svg" alt="icon-verbal">
+                <p class="Verbal">Verbal</p>
+            </div>  
+            <p>61 <span>/ 100</span></p>
+          </div>
+          <div class="catagories" id="c4"> 
+            <div class="catagories-name">
+                <img src="./assets/images/icon-visual.svg" alt="icon-visual">
+                <p class="Visual">Visual</p>
+            </div>  
+            <p>72 <span>/ 100</span></p>
+          </div>
+        </div>
+      <section class="button-class">
+        <button class="card__button">
+          <a href="index.html">Continue</a>
+        </button>
+        </section>
+      </section>
+   </article>
+  </body>
 </html>

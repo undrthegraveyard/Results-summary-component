@@ -1,0 +1,294 @@
+/* CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  /* Global root variables */
+  :root{
+    /* Primary colors */
+    --clr-primary-red: hsl(0, 100%, 67%);
+    --clr-primary-yellow: hsl(39, 100%, 56%);
+    --clr-primary-green: hsl(166, 100%, 37%);
+    --clr-primary-blue: hsl(234, 85%, 45%);
+
+    /* Background Gradients */
+    --clr-slate-blue: hsl(252, 100%, 67%);
+    --clr-royal-blue: hsl(241, 81%, 54%);
+
+    /* Circle Gradients */
+    --clr-violet-blue: hsla(256, 72%, 46%, 1);
+    --clr-persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* Neutrals */
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-pale-blue: hsl(221, 100%, 96%);
+    --clr-light-lavender: hsl(241, 100%, 89%);
+    --clr-dark-gray-blue: hsl(224, 30%, 27%);
+    
+    /* Font family */
+    --ff-base: 'Hanken Grotesk', sans-serif;
+
+    /* Font Weight */
+    --fw-base: 500;
+    --fw-medium: 700;
+    --fw-bold: 800;
+
+    /* Font Size */
+    --fs-base: 18px;
+  }
+
+/* Custom Css properties */
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100vw;
+    background: var(--clr-pale-blue);
+    font-family: var(--ff-base);
+}
+.card{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    gap: 0;
+    background-color: var(--clr-white);
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    box-shadow: -5px 10px 20px 5px hsla(241, 81%, 54%,0.1);
+}
+.card__hero-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, var(--clr-slate-blue), var(--clr-royal-blue));
+
+    padding: 2rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+    margin: 0 auto;
+}
+.card__hero-section p{
+    color: var(--clr-light-lavender);
+    font-weight: var(--fw-medium);
+    
+    font-size: 1rem;
+    line-height: 1.3;
+}
+.card__hero-section-score{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    text-align: center;
+    background: linear-gradient(180deg, var(--clr-violet-blue), var(--clr-persian-blue));
+    border-radius: 50%;
+
+    width: 8rem;
+    height: 8rem;
+    gap: 0.2rem;
+    margin: 1rem auto;
+}
+    
+.card__hero-section-score :nth-child(1){
+    color: var(--clr-white);
+    font-weight: var(--fw-bold);
+    
+    font-size: 3rem;
+    line-height: 1;
+}
+.card__hero-section-score :nth-child(2){
+    color: var(--clr-light-lavender);
+    font-weight: var(--fw-base);
+    opacity: 0.5;
+
+    font-size: 1rem;
+    line-height: 1.3;
+}
+.card__hero-section-feedback{
+    text-align: center;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1fr;
+    margin: 0;
+    
+    gap: 0.5rem;
+    padding: 1rem;
+}
+.card__hero-section-feedback :nth-child(1){
+    color: var(--clr-white);
+    font-weight: var(--fw-bold);
+    
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+.card__hero-section-feedback :nth-child(2){
+    color: var(--clr-light-lavender);
+    font-weight: var(--fw-base);
+   
+
+    font-size: 1rem;
+    line-height: 1.3;
+}
+.card__summary-section{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+.card__summary-section p{
+    color: var(--clr-dark-gray-blue);
+    font-weight: var(--fw-medium);
+    
+    font-size: 1rem;
+    line-height: 1.3;
+}
+.card__summary-catagories{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.catagories{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5rem;
+    width: 100%;
+
+    padding: 0.8rem 1rem;
+}
+
+.catagories-name{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     gap: 0.75rem;
+     font-weight: var(--fw-medium);
+}
+.catagories-name .Reaction {
+    color: var(--clr-primary-red);
+}
+.catagories-name .Memory {
+    color: var(--clr-primary-yellow);
+}
+.catagories-name .Verbal {
+    color: var(--clr-primary-green);
+}
+.catagories-name .Visual {
+    color: var(--clr-primary-blue);
+}
+#c1{
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+#c2{
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+#c3{
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+#c4{
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+.catagories span{
+    font-weight: var(--fw-medium);
+    color: var(--clr-dark-gray-blue);
+    opacity: 0.5;
+    
+}
+.button-class{
+    padding: 1rem 1.5rem ;
+}
+.card__button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: var(--clr-dark-gray-blue);
+    color: var(--clr-white);
+    
+    width: 100%;
+    height: auto;
+    
+    padding: 0.65rem 0;
+    border-radius: 5rem;
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+    box-shadow: none;
+    border: none;
+}
+.card__button:hover, .card__button:focus{
+    background: linear-gradient(180deg, var(--clr-slate-blue), var(--clr-royal-blue));
+    color: var(--clr-white);
+    box-shadow: none;
+}
+@media (min-width: 600px){
+    
+    body{
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        place-content: center;
+    }
+    .card{
+        grid-template-columns: 1fr 1fr;
+        max-width: 700px;
+        margin: auto;
+        border-radius: 1.5rem;
+    }
+    .card__hero-section{
+        padding: 1.5rem 3rem;
+        border-radius: 1.5rem;
+        
+    }
+    .card__hero-section p{
+        
+        font-size: 1.25rem;
+        line-height: 1;
+    }
+    .card__hero-section-score{
+    
+        width: 10rem;
+        height: 10rem;
+        gap: 0.3rem;
+        margin: 1.5rem auto;
+    }
+    .card__hero-section-feedback :nth-child(1){
+        
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+    .card__summary-section{
+        gap: 1rem;
+        padding: 1rem 2rem;
+    } 
+    .button-class{
+        padding: 1rem 0.5rem ;
+    }
+}
