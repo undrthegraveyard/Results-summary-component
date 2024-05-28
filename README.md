@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL:(https://github.com/undrthegraveyard/Results-summary-component.git)
-- Live Site URL:(https://your-live-site-url.com)
+- Live Site URL:(https://undrthegraveyard.github.io/Results-summary-component/)
 
 ### Built with
 
